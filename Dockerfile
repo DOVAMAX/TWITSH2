@@ -38,6 +38,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -qq -y --fix-missing --no-ins
   && apt-get clean -y \
   && rm -rf /var/lib/apt/lists/* \
   && rm -rf /usr/share/doc/*
-
+COPY ./requirements.txt ./
+COPY ./run.py ./                #  ← NEW
 ADD ./TwitchChannelPointsMiner ./TwitchChannelPointsMiner
 ENTRYPOINT [ "python", "run.py" ]
