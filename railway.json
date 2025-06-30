@@ -1,10 +1,14 @@
 {
   "build": {
+    "builder": "NIXPACKS",
+    "nixpacksConfig": {
+      "providers": ["python"]
+    },
     "commands": [
-      "pip install -r requirements.txt"
+      "pip install -r TWITSH2/requirements.txt"
     ]
   },
   "start": {
-    "command": "python run.py"
+    "cmd": "python TWITSH2/run.py"
   }
 }
