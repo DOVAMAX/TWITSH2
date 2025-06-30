@@ -1,14 +1,6 @@
 {
-  "build": {
-    "builder": "NIXPACKS",
-    "nixpacksConfig": {
-      "providers": ["python"]
-    },
-    "commands": [
-      "pip install -r TWITSH2/requirements.txt"
-    ]
-  },
-  "start": {
-    "cmd": "python TWITSH2/run.py"
+  "$schema": "https://railway.com/railway.schema.json",
+  "deploy": {
+    "startCommand": "python run.py"
   }
 }
